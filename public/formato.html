@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formato E-14</title>
+</head>
+
+<!--Css-->
+<link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<link rel="stylesheet" href="../public/css/style.css" />
+<link rel="stylesheet" href="../public/css/reposive.css" />
+
+<!-- Font Google -->
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet" />
+
+<!-- sweetalert2 -->
+<link rel="stylesheet" href="../node_modules/sweetalert2/dist/sweetalert2.min.css" />
+
+<!-- Font boxicons -->
+<link rel="stylesheet" href="../node_modules/boxicons/css/boxicons.min.css" />
+
+<!-- Icon -->
+
+<body>
+ <!--Menu-->
+ <div class="menubar">
+    <div class="logo_details">
+        <i class="bx bxl-audible icon"></i>
+        <div class="logo_name">Elecciones</div>
+        <i class="bx bx-menu" id="btn"></i>
+    </div>
+    <ul class="nav-list">
+        <li>
+            <a href="../index.html">
+                <i class="bx bx-grid-alt"></i>
+                <span class="link_name">Dashboard</span>
+            </a>
+            <span class="tooltip">Dashboard</span>
+        </li>
+        <li>
+            <a href="../public/consulta.html">
+                <i class='bx bx-search-alt-2'></i>
+                <span class="link_name">Consultar</span>
+            </a>
+            <span class="tooltip">Consultar</span>
+        </li>
+        <li>
+            <a href="../public/formato.html">
+                <i class='bx bx-clipboard'></i>
+                <span class="link_name"> E-14</span>
+            </a>
+            <span class="tooltip">E-14</span>
+        </li>
+        <li>
+            <a href="../public/estadistica.html">
+                <i class="bx bx-pie-chart-alt-2"></i>
+                <span class="link_name">Estadisticas</span>
+            </a>
+            <span class="tooltip">Estadisticas</span>
+        </li>
+
+        <li class="profile">
+            <div class="profile_details">
+                <img src="img/profile.png" alt="profile image">
+                <div class="profile_content">
+                    <div class="name">Username</div>
+                    <div class="designation">Admin</div>
+                </div>
+            </div>
+            <i class="bx bx-log-out" id="log_out"></i>
+        </li>
+    </ul>
+</div>
+    <section class="home-section">
+        <div class="text">Formato E-14</div>
+        <div class="container">
+            <section class="vh-40 gradient-custom">
+                <div class="container h-100">
+                    <div class="row d-flex justify-content-center align-items-center h-100">
+                        <div class="col-12 col-md- col-lg-6 col-xl-5">
+                            <div class="card  text-white"
+                                style="border-radius: 1rem; background-color: var(--color-default);">
+                                <div class="card-body p-5 text-center">
+                                    <div class="mb-md-3 mt-md-2 pb-3">
+                                        <h3 class="fw-bold mb-2 text-uppercase">Formato E-14</h3>
+                                        <p class="text-white-50 mb-5">Por favor Ingrese los Datos!</p>
+                                        <div class="form-outline form-white mb-4">
+                                            <form method="POST">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <select id="SelectDepart"
+                                                            class="form-control form-control-lg"
+                                                            autocomplete="off" required>
+                                                            <option class="form-control form-control-lg" value="">
+                                                                Seleccionar...</option>
+                                                        </select>
+                                                        <label class="form-label">Departamento</label>
+                                                    </div>
+
+                                                    <div class="col-6">
+                                                        <select id="SelectMuni"
+                                                            class="form-control form-control-lg"
+                                                            autocomplete="off" required disabled>
+                                                            <option class="form-control form-control-lg" value="">
+                                                                Seleccionar...</option>
+                                                        </select>
+
+                                                        <label class="form-label">Municipio</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-6"> <input type="text" id="zona"
+                                                            class="form-control form-control-lg"
+                                                            autocomplete="off" required />
+                                                        <label class="form-label">Zona</label>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <input type="text" id="puesto"
+                                                            class="form-control form-control-lg"
+                                                            autocomplete="off" required />
+                                                        <label class="form-label">Puesto</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <input type="text" id="mesa"
+                                                            class="form-control form-control-lg"
+                                                            autocomplete="off" required />
+                                                        <label class="form-label">Mesa</label>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <input type="text" id="lugar"
+                                                            class="form-control form-control-lg"
+                                                            autocomplete="off" required />
+                                                        <label class="form-label">Lugar</label>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <input type="file"
+                                                            class="form-control form-control-lg text-cente" id="">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div>
+                                            <button type="submit" class="btn btn-light" onclick="">Registrar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+</body>
+<script type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="../node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+<script type="text/javascript" src="../node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
+<script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="../app.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+</html>

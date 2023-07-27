@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formato E-14</title>
+</head>
+
+<!--Css-->
+<link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<link rel="stylesheet" href="../public/css/style.css" />
+<link rel="stylesheet" href="../public/css/reposive.css" />
+<link rel="stylesheet" href="../node_modules/datatables.net-dt/css/jquery.dataTables.min.css" />
+
+<!-- Font Google -->
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet" />
+
+<!-- sweetalert2 -->
+<link rel="stylesheet" href="../node_modules/sweetalert2/dist/sweetalert2.min.css" />
+
+<!-- Font boxicons -->
+<link rel="stylesheet" href="../node_modules/boxicons/css/boxicons.min.css" />
+
+<!-- Icon -->
+
+<body>
+    <!--Menu-->
+    <!--Menu-->
+    <div class="menubar">
+        <div class="logo_details">
+            <i class="bx bxl-audible icon"></i>
+            <div class="logo_name">Elecciones</div>
+            <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <a href="../index.html">
+                    <i class="bx bx-grid-alt"></i>
+                    <span class="link_name">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="../public/consulta.html">
+                    <i class='bx bx-search-alt-2'></i>
+                    <span class="link_name">Consultar</span>
+                </a>
+                <span class="tooltip">Consultar</span>
+            </li>
+            <li>
+                <a href="../public/formato.html">
+                    <i class='bx bx-clipboard'></i>
+                    <span class="link_name"> E-14</span>
+                </a>
+                <span class="tooltip">E-14</span>
+            </li>
+            <li>
+                <a href="../public/estadistica.html">
+                    <i class="bx bx-pie-chart-alt-2"></i>
+                    <span class="link_name">Estadisticas</span>
+                </a>
+                <span class="tooltip">Estadisticas</span>
+            </li>
+
+            <li class="profile">
+                <div class="profile_details">
+                    <img src="img/profile.png" alt="profile image">
+                    <div class="profile_content">
+                        <div class="name">Username</div>
+                        <div class="designation">Admin</div>
+                    </div>
+                </div>
+                <i class="bx bx-log-out" id="log_out"></i>
+            </li>
+        </ul>
+    </div>
+
+    <section class="home-section">
+        <div class="text">Consultar</div>
+        <div class="container">
+            <table id="example" class="display compact" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Office</th>
+                        <th>Age</th>
+                        <th>Start date</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Office</th>
+                        <th>Age</th>
+                        <th>Start date</th>
+                        <th>Salary</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </section>
+</body>
+<script type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="../node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+<script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="../node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="../app.js"></script>
+
+</html>

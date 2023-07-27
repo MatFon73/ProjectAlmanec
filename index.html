@@ -1,0 +1,41 @@
+<!--doctype html-->
+<html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesion</title>
+    <link rel="stylesheet" type="text/css" href="public/css/login.css" />
+    <link rel="stylesheet" href="node_modules/sweetalert2/dist/sweetalert2.min.css" />
+
+    <!-- Font Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <form method="POST">
+        <div class="heading">
+            <p>Iniciar <font color="#FFF">Sesion</font>
+            </p>
+            <p>Bienvenido al sistema de elecciones</p>
+        </div>
+        <div class="input-container">
+            <div class="p-icon">
+                <img src="public/img/profile.png">
+            </div>
+            <div class="user-inputs">
+                <input type="number" id="CedulaLogin" placeholder="Cedula">
+                <input type="password" id="PassLogin" placeholder=" Contraseña ">
+            </div>
+        </div>
+        <button class="login" type="submit" onclick="return Login()">Iniciar Sesion</button>
+        <a href="#" class="forget">¿Haz olvidadola contraseña?</a>
+    </form>
+
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script type="text/javascript" src="public/js/Auth.js"></script>
+</body>
+
+</html>

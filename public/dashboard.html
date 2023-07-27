@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formato E-14</title>
+</head>
+
+<!--Css-->
+<link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/reposive.css" />
+
+<!-- Font Google -->
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet" />
+
+<!-- sweetalert2 -->
+<link rel="stylesheet" href="../node_modules/sweetalert2/dist/sweetalert2.min.css" />
+
+<!-- Font boxicons -->
+<link rel="stylesheet" href="../node_modules/boxicons/css/boxicons.min.css" />
+
+<!-- Icon -->
+
+<body>
+  <div class="contenedor">
+    <div class="menu">
+      <div class="menubar">
+        <div class="logo_details">
+          <i class="bx bxl-audible icon"></i>
+          <div class="logo_name">Elecciones</div>
+          <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <ul class="nav-list">
+          <li>
+            <a href="index.html">
+              <i class="bx bx-grid-alt"></i>
+              <span class="link_name">Dashboard</span>
+            </a>
+            <span class="tooltip">Dashboard</span>
+          </li>
+          <li>
+            <a href="consulta.html">
+              <i class='bx bx-search-alt-2'></i>
+              <span class="link_name">Consultar</span>
+            </a>
+            <span class="tooltip">Consultar</span>
+          </li>
+          <li>
+            <a href="formato.html">
+              <i class='bx bx-clipboard'></i>
+              <span class="link_name"> Testigos</span>
+            </a>
+            <span class="tooltip">Testigos</span>
+          </li>
+          <li>
+            <a href="estadistica.html">
+              <i class="bx bx-pie-chart-alt-2"></i>
+              <span class="link_name">Auditores</span>
+            </a>
+            <span class="tooltip">Auditores</span>
+          </li>
+
+          <li class="profile">
+            <div class="profile_details">
+              <img src="img/profile.png" alt="profile image">
+              <div class="profile_content">
+                <div class="name" id="name">Username</div>
+                <div class="designation" id="designation">Admin</div>
+              </div>
+            </div>
+            <i class="bx bx-log-out" id="log_out"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="Barra">
+      <div class="text">Dashboard</div>
+    </div>
+    <div class="Contenido">
+      <section class="home-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-xl-3">
+              <div class="card bg-c-blue order-card">
+                <div class="card-block">
+                  <h3 class="text-right">Mesas<span> <i class='bx bx-search-alt-2'></i></span></h2>
+                    <a class="btn btn-default" href="consulta.html" class="m-b-0">Ver Contenido<span
+                        class="f-right"><i class='bx bxs-right-arrow-circle'></i></span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-xl-3">
+              <div class="card bg-c-yellow order-card">
+                <div class="card-block">
+                  <h3 class="text-right">Testigos<span> <i class='bx bx-clipboard'></i></span></h2>
+                    <a class="btn btn-default" href="formato.html" class="m-b-0">Ver Contenido<span
+                        class="f-right"><i class='bx bxs-right-arrow-circle'></i></span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-xl-3">
+              <div class="card bg-c-pink order-card">
+                <div class="card-block">
+                  <h3 class="text-right">Auditores<span> <i class="bx bx-pie-chart-alt-2"></i></span></h2>
+                    <a class="btn btn-default" href="estadistica.html" class="m-b-0">Ver Contenido<span
+                        class="f-right"><i class='bx bxs-right-arrow-circle'></i></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+
+</body>
+<script type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="../node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+<script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="../app.js"></script>
+
+</html>
