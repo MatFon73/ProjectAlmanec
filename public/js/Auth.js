@@ -5,9 +5,9 @@ function Login() {
     if (CedulaLogin.value == "" || PassLogin.value == "") {
         Swal.fire({
             icon: "warning",
-            title: "Login",
+            title: "Iniciar Sesion",
             confirmButtonColor: "#5cb85c",
-            text: 'There is a blank space.',
+            text: 'Hay un espacio en blanco.',
         });
         return false;
     }
@@ -20,9 +20,9 @@ function Login() {
             localStorage.setItem("UserData", response.CheckUser);
             Swal.fire({
                 icon: response.r2,
-                title: "Login",
+                title: "Iniciar Sesion",
                 confirmButtonColor: "#5cb85c",
-                text: response.r1 + " with " + response.CheckUser,
+                text: response.r1 + " Con " + response.CheckUser,
             }).then(function () {
                 if (response.r2 == "success") {
                     window.location.href = "public/dashboard.html";
@@ -32,7 +32,7 @@ function Login() {
         error: function (e) {
             Swal.fire({
                 icon: "error",
-                title: "Login",
+                title: "Iniciar Sesion",
                 confirmButtonColor: "#5cb85c",
                 text: e,
             });
@@ -49,9 +49,9 @@ function LogOut() {
             localStorage.removeItem("UserData");
             Swal.fire({
                 icon: "success",
-                title: "LogOut",
+                title: "Cerrar Sesion",
                 confirmButtonColor: "#5cb85c",
-                text: "Logged out successfully.",
+                text: "Sesion cerrada con exito.",
             }).then(function () {
                 window.location.href = "../index.html";
             });
@@ -59,7 +59,7 @@ function LogOut() {
         error: function (e) {
             Swal.fire({
                 icon: "error",
-                title: "LogOut",
+                title: "Cerrar Sesion",
                 confirmButtonColor: "#5cb85c",
                 text: e,
             });

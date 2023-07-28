@@ -24,96 +24,98 @@
 <!-- Icon -->
 
 <body>
-  <div class="contenedor">
-    <div class="menu">
-      <div class="menubar">
-        <div class="logo_details">
-          <i class="bx bxl-audible icon"></i>
-          <div class="logo_name">Elecciones</div>
-          <i class="bx bx-menu" id="btn"></i>
-        </div>
-        <ul class="nav-list">
-          <li>
-            <a href="index.html">
-              <i class="bx bx-grid-alt"></i>
-              <span class="link_name">Dashboard</span>
-            </a>
-            <span class="tooltip">Dashboard</span>
-          </li>
-          <li>
-            <a href="consulta.html">
-              <i class='bx bx-search-alt-2'></i>
-              <span class="link_name">Consultar</span>
-            </a>
-            <span class="tooltip">Consultar</span>
-          </li>
-          <li>
-            <a href="formato.html">
-              <i class='bx bx-clipboard'></i>
-              <span class="link_name"> Testigos</span>
-            </a>
-            <span class="tooltip">Testigos</span>
-          </li>
-          <li>
-            <a href="estadistica.html">
-              <i class="bx bx-pie-chart-alt-2"></i>
-              <span class="link_name">Auditores</span>
-            </a>
-            <span class="tooltip">Auditores</span>
-          </li>
-
-          <li class="profile">
-            <div class="profile_details">
-              <img src="img/profile.png" alt="profile image">
-              <div class="profile_content">
-                <div class="name" id="name">Username</div>
-                <div class="designation" id="designation">Admin</div>
-              </div>
-            </div>
-            <i class="bx bx-log-out" id="log_out"></i>
-          </li>
-        </ul>
-      </div>
+  <div class="menubar">
+    <div class="logo_details">
+      <i class="bx bxl-audible icon"></i>
+      <div class="logo_name">Elecciones</div>
+      <i class="bx bx-menu" id="btn"></i>
     </div>
-    <div class="Barra">
-      <div class="text">Dashboard</div>
-    </div>
-    <div class="Contenido">
-      <section class="home-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4 col-xl-3">
-              <div class="card bg-c-blue order-card">
-                <div class="card-block">
-                  <h3 class="text-right">Mesas<span> <i class='bx bx-search-alt-2'></i></span></h2>
-                    <a class="btn btn-default" href="consulta.html" class="m-b-0">Ver Contenido<span
-                        class="f-right"><i class='bx bxs-right-arrow-circle'></i></span></a>
-                </div>
-              </div>
-            </div>
+    <ul class="nav-list">
+      <li>
+        <a href="index.html">
+          <i class="bx bx-grid-alt"></i>
+          <span class="link_name">Dashboard</span>
+        </a>
+        <span class="tooltip">Dashboard</span>
+      </li>
+      <li>
+        <a href="consulta.html">
+          <i class='bx bx-search-alt-2'></i>
+          <span class="link_name">Mesa</span>
+        </a>
+        <span class="tooltip">Mesa</span>
+      </li>
+      <li>
+        <a href="formato.html">
+          <i class='bx bx-clipboard'></i>
+          <span class="link_name"> Testigos</span>
+        </a>
+        <span class="tooltip">Testigos</span>
+      </li>
+      <li>
+        <a href="estadistica.html">
+          <i class="bx bx-pie-chart-alt-2"></i>
+          <span class="link_name">Auditores</span>
+        </a>
+        <span class="tooltip">Auditores</span>
+      </li>
 
-            <div class="col-md-4 col-xl-3">
-              <div class="card bg-c-yellow order-card">
-                <div class="card-block">
-                  <h3 class="text-right">Testigos<span> <i class='bx bx-clipboard'></i></span></h2>
-                    <a class="btn btn-default" href="formato.html" class="m-b-0">Ver Contenido<span
-                        class="f-right"><i class='bx bxs-right-arrow-circle'></i></span></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4 col-xl-3">
-              <div class="card bg-c-pink order-card">
-                <div class="card-block">
-                  <h3 class="text-right">Auditores<span> <i class="bx bx-pie-chart-alt-2"></i></span></h2>
-                    <a class="btn btn-default" href="estadistica.html" class="m-b-0">Ver Contenido<span
-                        class="f-right"><i class='bx bxs-right-arrow-circle'></i></span></a>
-                </div>
-              </div>
+      <li class="profile">
+        <div class="profile_details">
+          <img src="img/profile.png" alt="profile image">
+          <div class="profile_content">
+            <div class="name" id="name">Username</div>
+            <div class="designation" id="designation">Admin</div>
+          </div>
+        </div> <button type="submit" onclick="LogOut()"><i class="bx bx-log-out" id="log_out"></i></button>
+      </li>
+    </ul>
+  </div>
+  <section class="home-section">
+    <div class="text">Dashboard</div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-xl-3">
+          <div class="card bg-c-blue order-card">
+            <div class="card-block">
+              <h3 class="text-right">Mesa<span> <i class='bx bx-search-alt-2'></i></span></h2>
+                <a class="btn btn-default" href="consulta.html" class="m-b-0">Ver Contenido<span class="f-right"><i
+                      class='bx bxs-right-arrow-circle'></i></span></a>
             </div>
           </div>
         </div>
-      </section>
+
+        <div class="col-md-4 col-xl-3">
+          <div class="card bg-c-yellow order-card">
+            <div class="card-block">
+              <h3 class="text-right">Testigos<span> <i class='bx bx-clipboard'></i></span></h2>
+                <a class="btn btn-default" href="formato.html" class="m-b-0">Ver Contenido<span class="f-right"><i
+                      class='bx bxs-right-arrow-circle'></i></span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-xl-3">
+          <div class="card bg-c-pink order-card">
+            <div class="card-block">
+              <h3 class="text-right">Auditores<span> <i class="bx bx-pie-chart-alt-2"></i></span></h2>
+                <a class="btn btn-default" href="estadistica.html" class="m-b-0">Ver Contenido<span class="f-right"><i
+                      class='bx bxs-right-arrow-circle'></i></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="contenedor">
+    <div class="menu">
+
+    </div>
+    <div class="Barra">
+
+    </div>
+    <div class="Contenido">
+
     </div>
   </div>
 
@@ -122,6 +124,7 @@
 <script type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>
 <script type="text/javascript" src="../node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
 <script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="js/Auth.js"></script>
 <script type="text/javascript" src="../app.js"></script>
 
 </html>

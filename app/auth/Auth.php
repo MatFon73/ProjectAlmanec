@@ -10,58 +10,17 @@ class Auth
         $this->Connection = new Connection();
         $this->Connectiondb = $this->Connection->connect();
     }
-
-    function SignUp($Name, $User, $Pass)
-    {
-        try {
-            $this->Connectiondb->beginTransaction();
-            $UserExist = ("SELECT COUNT(*) FROM user WHERE user = :User");
-            $sql = $this->Connectiondb->prepare($UserExist);
-            $sql->bindParam(':User', $User);
-            $sql->execute();
-
-            if ($sql->fetchColumn() > 0) {
-                $Icon = "error";
-                $Messege = 'User already exists.';
-            } else {
-                $query = 'INSERT INTO user (name, user, pass) VALUES (:Name, :User, :Pass)';
-
-                $sql = $this->Connectiondb->prepare($query);
-
-                $sql->bindParam(':Name', $Name);
-                $sql->bindParam(':User', $User);
-                $passwordHash = md5($Pass);
-                $sql->bindParam(':Pass', $passwordHash);
-                $sql->execute();
-
-                $this->Connectiondb->commit();
-
-                mkdir("../uploads/" . $User, 0777, true);
-
-                $Icon = "success";
-                $Messege = "Successfully Registered.";
-            }
-            $response = array(
-                'r1' => $Messege,
-                'r2' => $Icon
-            );
-            echo json_encode($response);
-        } catch (PDOException $e) {
-            $this->Connectiondb->rollBack();
-            echo 'The following error was presented: ' . $e;
-        }
-    }
-    function Login($User, $Pass)
+    function Login($Documento, $Pass)
     {
         try {
             $this->Connectiondb->beginTransaction();
 
-            $UserExist = ("SELECT * FROM user WHERE user = :User");
+            $UserExist = ("SELECT * FROM usuarios WHERE documento = :Documento");
             $sql = $this->Connectiondb->prepare($UserExist);
 
             $passwordHash = md5($Pass);
 
-            $sql->bindParam(':User', $User);
+            $sql->bindParam(':Documento', $Documento);
             $sql->execute();
 
             $result = $sql->fetch(PDO::FETCH_ASSOC);
@@ -69,11 +28,11 @@ class Auth
             $_SESSION['Auth'] = "";
 
             if (($passwordHash === $result['pass'])) {
-                $_SESSION['Auth'] =  $User;
+                $_SESSION['Auth'] =  $Documento;
                 $Icon = "success";
-                $Messege = "Successfully Login";
+                $Messege = "Se inició sesion correctamente.";
             } else {
-                $Messege = "User or password Incorret.";
+                $Messege = "el usuario o contraseña incorrecta.";
             }
             $response = array(
                 'r1' => $Messege,
