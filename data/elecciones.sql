@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-07-2023 a las 23:53:35
+-- Tiempo de generación: 30-07-2023 a las 06:03:20
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -97,6 +97,15 @@ CREATE TABLE `tipousuarios` (
   `descripcion` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `tipousuarios`
+--
+
+INSERT INTO `tipousuarios` (`id_tpusuarios`, `descripcion`) VALUES
+(1, 'Administrador'),
+(2, 'Testigo'),
+(3, 'Auditor');
+
 -- --------------------------------------------------------
 
 --
@@ -108,12 +117,20 @@ CREATE TABLE `usuarios` (
   `id_tpusuarios` int(50) NOT NULL,
   `nombres` varchar(50) NOT NULL,
   `apellidos` varchar(50) NOT NULL,
+  `pass` varchar(50) NOT NULL,
   `f_nacimiento` date NOT NULL,
   `documento` int(50) NOT NULL,
   `telefono` int(50) NOT NULL,
   `correo` varchar(50) NOT NULL,
   `direccion` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id_usuarios`, `id_tpusuarios`, `nombres`, `apellidos`, `pass`, `f_nacimiento`, `documento`, `telefono`, `correo`, `direccion`) VALUES
+(3, 1, 'Mateo', 'Fonseca', '81dc9bdb52d04dc20036dbd8313ed055', '2000-02-13', 1234, 123456789, 'mateo@gmail.com', 'Crr 56 #54-26');
 
 --
 -- Índices para tablas volcadas
@@ -192,13 +209,13 @@ ALTER TABLE `tipos`
 -- AUTO_INCREMENT de la tabla `tipousuarios`
 --
 ALTER TABLE `tipousuarios`
-  MODIFY `id_tpusuarios` int(50) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_tpusuarios` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuarios` int(50) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_usuarios` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Restricciones para tablas volcadas
