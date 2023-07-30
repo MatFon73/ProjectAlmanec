@@ -1,0 +1,189 @@
+:root {
+    --Primary-color: #2A8FBD;
+    --Secondary-color: #207fab;
+    --Third-color: #327CCB;
+    --Light-color: #fff;
+    
+    --Primary-color: #2A8FBD;
+    --color-second: #207fab;
+    --color-white: #fff;
+    --color-body: #e4e9f7;
+    --color-light: #e0e0e0;
+        
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-body);
+}
+.contenedor{
+    position: relative;
+}
+.contenedor .carta{
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background-color: var(--Secondary-color);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.contenedor .carta:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(167, 208, 210);
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+.contenedor .carta:hover:before{
+    clip-path: circle(300px at 80% -20%);
+}
+.contenedor .carta:after{
+    content: 'mesa';
+    position: absolute;
+    top:30%;
+    left:-20%;
+    font-size: 12em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.05);
+}
+.contenedor .carta .imgBx{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+}
+.contenedor .carta:hover .imgBx{
+    top: 0%;
+    transform: translateY(0%);
+}
+.contenedor .carta .imgBx img{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%) rotate(-25deg);
+    width: 210px;
+}
+.contenedor .carta .contentBx{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+}
+.contenedor .carta:hover .contentBx{
+    height: 210px;
+}
+.contenedor .carta .contentBx h2{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+}
+.contenedor .carta .contentBx .estado,
+.contenedor .carta .contentBx .datos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.contenedor .carta:hover .contentBx .estado{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+
+.contenedor .carta:hover .contentBx .datos{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.6s;
+}
+
+.contenedor .carta .contentBx .estado h3,
+.contenedor .carta .contentBx .datos h3{
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+.contenedor .carta .contentBx .estado select{
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    color: #111;
+    background: #fff;
+    margin: 0 5px;
+    transition: 0.5s;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.contenedor .carta .contentBx .estado select:hover{
+    background: #9bdc28;
+}
+
+.contenedor .carta .contentBx .datos span{
+    width: 20px;
+    height: 20px;
+    background: #ff0;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.contenedor .carta .contentBx a{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s;
+}
+.contenedor .carta:hover .contentBx a{
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.75s;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

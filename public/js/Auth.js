@@ -22,10 +22,10 @@ function Login() {
                 icon: response.r2,
                 title: "Iniciar Sesion",
                 confirmButtonColor: "#5cb85c",
-                text: response.r1 + " Con " + response.CheckUser,
+                text: response.r1,
             }).then(function () {
                 if (response.r2 == "success") {
-                    window.location.href = "public/dashboard.html";
+                    window.location.href = "public/index/index.html";
                 }
             });
         },
@@ -42,7 +42,7 @@ function Login() {
 }
 function LogOut() {
     $.ajax({
-        url: "../app/Execute_controller.php",
+        url: "../../app/Execute_controller.php",
         type: "POST",
         data: "LogOut=" + localStorage.getItem("UserData"),
         success: function () {
@@ -53,7 +53,7 @@ function LogOut() {
                 confirmButtonColor: "#5cb85c",
                 text: "Sesion cerrada con exito.",
             }).then(function () {
-                window.location.href = "../index.html";
+                window.location.href = "../../index.html";
             });
         },
         error: function (e) {
@@ -67,3 +67,12 @@ function LogOut() {
     });
     return false;
 }
+$(document).ready(function(){
+    $('#example').dataTable({
+        responsive: true,
+        language: {
+            url: '//cdn.datatables.net/plug-ins/1.13.5/i18n/es-ES.json'
+        }
+    });
+})
+
