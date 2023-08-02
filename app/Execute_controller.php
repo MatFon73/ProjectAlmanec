@@ -1,4 +1,8 @@
 <?php
+include  'controllers/Empleado_controller.php';
+include  'controllers/Mesa_controller.php';
+include  'controllers/User_controller.php';
+
 include  'auth/Auth.php';
 include  'Connection.php';
 

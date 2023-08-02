@@ -36,6 +36,8 @@ function Login() {
                 confirmButtonColor: "#5cb85c",
                 text: e,
             });
+            
+            console.log(e);
         },
     });
     return false;
@@ -67,12 +69,4 @@ function LogOut() {
     });
     return false;
 }
-$(document).ready(function(){
-    $('#example').dataTable({
-        responsive: true,
-        language: {
-            url: '//cdn.datatables.net/plug-ins/1.13.5/i18n/es-ES.json'
-        }
-    });
-})
 

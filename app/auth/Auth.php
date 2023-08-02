@@ -58,7 +58,7 @@ class Auth
     {
         try {
             if (!isset($_SESSION['Auth'])) {
-                $response = array('status' => 'redirect', 'location' => '../index.html');
+                $response = array('status' => 'redirect', 'location' => '../../index.html');
             } else {
                 if ($ChecckUser == $_SESSION['Auth']) {
                     $response = array('status' => 'redirect', 'location' => 'home.html');

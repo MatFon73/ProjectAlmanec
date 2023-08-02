@@ -4,113 +4,120 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Datos</title>
+  <title>Mesa</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
-  <link rel="stylesheet" href="../../node_modules/boxicons/css/boxicons.min.css">
-
+  <link rel="stylesheet" href="../../node_modules/datatables.net-dt/css/jquery.dataTables.min.css" />
   <link rel="stylesheet" href="assets/css/style.css">
-    <!-- sweetalert2 -->
-    <link rel="stylesheet" href="../../node_modules/sweetalert2/dist/sweetalert2.min.css" />
+  <link rel="stylesheet" href="assets/css/style2.css">
+
+  <!-- sweetalert2 -->
+  <link rel="stylesheet" href="../../node_modules/sweetalert2/dist/sweetalert2.min.css" />
   <link rel="shortcut icon" href="" />
 </head>
 
 <body>
-    <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo" href="index.html"><img src="assets/images/logo.png" alt="logo" /></a>
-        <a class="navbar-brand brand-logo-mini" href="index.html"><i class='bx bx-archive' style="color:#4AAFDD;"></i></a>
-      </div>
-      <div class="navbar-menu-wrapper d-flex align-items-stretch">
-        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
-          <span class="mdi mdi-menu"></span>
-        </button>
-        <ul class="navbar-nav navbar-nav-right">
-          <li class="nav-item nav-logout d-none d-lg-block">
-            <button onclick="LogOut()" class="nav-link btn" type="submit">
-              <i class="mdi mdi-power"></i>
-            </>
-          </li>
-        </ul>
-        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
-          data-toggle="offcanvas">
-          <span class="mdi mdi-menu"></span>
-        </button>
-      </div>
-    </nav>
-    <div class="container-fluid page-body-wrapper">
-      <nav class="sidebar sidebar-offcanvas" id="sidebar">
-        <ul class="nav">
-          <li class="nav-item nav-profile">
-            <a href="#" class="nav-link">
-              <div class="nav-profile-image">
-                <img src="assets/images/faces/face1.jpg" alt="profile">
-                <span class="login-status online"></span>
-              </div>
-              <div class="nav-profile-text d-flex flex-column">
-                <span class="font-weight-bold mb-2">Mateo Fonseca</span>
-                <span class="text-secondary text-small">Administrador</span>
-              </div>
-              <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">
-              <span class="menu-title">Datos</span>
-              <i class="mdi mdi-home menu-icon"></i>
-            </a>
-          </li>
-         
-          <li class="nav-item">
-            <a class="nav-link" href="Mesa.html">
-              <span class="menu-title">Mesa</span>
-              <i class="mdi mdi-contacts menu-icon"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Testigo.html">
-              <span class="menu-title">Testigo</span>
-              <i class="mdi mdi-format-list-bulleted menu-icon"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Auditor.html">
-              <span class="menu-title">Auditor</span>
-              <i class="mdi mdi-chart-bar menu-icon"></i>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <!-- partial -->
-      <div class="main-panel">
-        <div class="content-wrapper">
-          <div class="page-header">
-            <h3 class="page-title">
-              <span class="page-title-icon bg-gradient-primary text-white me-2">
-                <i class="mdi mdi-home"></i>
-              </span> Datos
-            </h3>
-          </div>
-          <div class="row">
-            <div class="col-md-7 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <div class="clearfix">
-                    <h4 class="card-title float-left">Encuesta</h4>
-                    <div id="visit-sale-chart-legend"
-                      class="rounded-legend legend-horizontal legend-top-right float-right"></div>
-                  </div>
-                  <canvas id="visit-sale-chart" class="mt-4"></canvas>
-                </div>
-              </div>
+  <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row" style="z-index: 1;">
+    <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+      <a class="navbar-brand brand-logo" href="index.html"><img src="assets/images/logo.png" alt="logo" /></a>
+      <a class="navbar-brand brand-logo-mini" href="index.html"><i class='bx bx-archive' style="color:#4AAFDD;"></i></a>
+    </div>
+    <div class="navbar-menu-wrapper d-flex align-items-stretch">
+      <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+        <span class="mdi mdi-menu"></span>
+      </button>
+      <ul class="navbar-nav navbar-nav-right">
+        <li class="nav-item nav-logout d-none d-lg-block">
+          <a onclick="LogOut()" class="nav-link" type="submit">
+            <i class="mdi mdi-power"></i>
+          </a>
+        </li>
+      </ul>
+      <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+        data-toggle="offcanvas">
+        <span class="mdi mdi-menu"></span>
+      </button>
+    </div>
+  </nav>
+  <div class="container-fluid page-body-wrapper">
+    <nav class="sidebar sidebar-offcanvas" id="sidebar">
+      <ul class="nav">
+        <li class="nav-item nav-profile">
+          <a href="#" class="nav-link">
+            <div class="nav-profile-image">
+              <img src="assets/images/faces/face1.jpg" alt="profile">
+              <span class="login-status online"></span>
             </div>
-            <div class="col-md-5 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Personas Que iran a votar</h4>
-                  <canvas id="traffic-chart"></canvas>
-                  <div id="traffic-chart-legend" class="rounded-legend legend-vertical legend-bottom-left pt-4"></div>
+            <div class="nav-profile-text d-flex flex-column">
+              <span class="font-weight-bold mb-2">Mateo Fonseca</span>
+              <span class="text-secondary text-small">Administrador</span>
+            </div>
+            <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">
+            <span class="menu-title">Usuarios</span>
+            <i class="mdi mdi-home menu-icon"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- partial -->
+    <div class="main-panel">
+      <div class="content-wrapper">
+        <div class="page-header">
+          <h3 class="page-title">
+            <span class="page-title-icon bg-gradient-primary text-white me-2">
+              <i class="mdi mdi-home"></i>
+            </span> Usuarios
+          </h3>
+        </div>
+        <div class="row">
+          <div class="col-md-12 grid-margin stretch-card">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
+                <div class="clearfix">
+                  <h4 class="card-title float-left">Consulta De Mesas</h4>
+                  <div id="visit-sale-chart-legend"
+                    class="rounded-legend legend-horizontal legend-top-right float-right">
+                  </div>
+                  <table id="datatable_users" class="table" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th class="centered">#</th>
+                        <th class="centered">Nombre</th>
+                        <th class="centered">Apellido</th>
+                        <th class="centered">Fecha de naciemiento</th>
+                        <th class="centered">Telefono</th>
+                        <th class="centered">Correo</th>
+                        <th class="centered">Direccion</th>
+                        <th class="centered">Status</th>
+                        <th class="centered">Options</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tableBody_users">
+
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <th class="centered">#</th>
+                        <th class="centered">Nombre</th>
+                        <th class="centered">Apellido</th>
+                        <th class="centered">Fecha de naciemiento</th>
+                        <th class="centered">Telefono</th>
+                        <th class="centered">Correo</th>
+                        <th class="centered">Direccion</th>
+                        <th class="centered">Status</th>
+                        <th class="centered">Options</th>
+                      </tr>
+                    </tfoot>
+                  </table>
                 </div>
               </div>
             </div>
@@ -118,6 +125,7 @@
         </div>
       </div>
     </div>
+  </div>
   </div>
   <script src="assets/vendors/js/vendor.bundle.base.js"></script>
   <script src="assets/vendors/chart.js/Chart.min.js"></script>
@@ -129,6 +137,8 @@
   <script src="assets/js/todolist.js"></script>
   <script type="text/javascript" src="../../node_modules/jquery/dist/jquery.js"></script>
   <script type="text/javascript" src="../../node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+  <script type="text/javascript" src="../../node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+  <script src="../js/Usuarios.js"></script>
   <script src="../js/Auth.js"></script>
 
 </body>
